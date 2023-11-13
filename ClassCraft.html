@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Sync</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #0031a5;
+            color: rgb(29, 56, 155);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+        }
+        .button:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .button {
+            background-color: #0031a5;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        .button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to ClassCraft</h1>
+        <p>Select your subject:</p>
+        <select id="subject" name="subject">
+            <option value="math">Math/Calculus</option>
+            <option value="science">Science/Physics</option>
+            <option value="history">History/Geography</option>
+            <option value="english">English/Literature</option>
+        </select>
+        <br><br>
+        <button class="button" onclick="bookAppointment()">Book Appointment</button>
+        <button class="button" onclick="cancelAppointment()">Cancel Appointment</button>
+        <br><br>
+        <p id="result"></p>
+    </div>
+    <body>
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+    
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+    
+            <button type="submit" class="button">Sign In</button>
+        </div>
+    </body>
+
+    <script>
+        function bookAppointment() {
+            let subject = document.getElementById("subject").value;
+            document.getElementById("result").innerHTML = "Appointment booked for " + subject + "
